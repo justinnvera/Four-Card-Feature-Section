@@ -1,0 +1,179 @@
+/* ! Global ! */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+:root {
+    --red: hsl(0, 78%, 62%);
+    --cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+    --very-dark-blue: hsl(234, 12%, 34%);
+    --grayish-blue: hsl(229, 6%, 66%);
+    --very-light-gray: hsl(0, 0%, 98%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--very-light-gray);
+    overflow: hidden;
+}
+/* ? Main ? */
+main {
+    margin: 4rem 0;
+}
+/* ? Container ? */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+/* ? Header ? */
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.thin-header {
+    font-weight: 200;
+    color: var(--very-dark-blue);
+}
+.bolded-header {
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+.paragraph-header {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--grayish-blue);
+    margin-top: 1rem;
+    max-width: 80%;
+}
+/* ? Four card section container */
+.four-card-section-container {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(4, 130px);
+    grid-template-areas:
+    ".          team-builder         ."
+    "supervisor team-builder calculator"
+    "supervisor karma       calculator"
+    ".          karma                .";
+    gap: 2rem;
+    margin-top: 3rem;
+}
+/* ? Cards ? */
+.cards {
+    /* The following box-shadow code are from https://html-css-js.com/css/generator/box-shadow/ */
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.11); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.11);
+    /* Borrowed code ends here */
+    border-radius: 5px;
+    padding: 2rem;
+    position: relative;
+}
+.cards h2 {
+    font-weight: 600;
+    color: var(--very-dark-blue);
+}
+.cards p {
+    font-weight: 400;
+    font-size: 15px;
+    color: var(--grayish-blue);
+}
+.cards img {
+    position: absolute;
+    bottom: 25px;
+    right: 30px;
+}
+/* ? Supervisor Card ? */
+.supervisor {
+    grid-area: supervisor;
+    border-top: 4px solid var(--cyan);
+}
+/* ? Team Builder Card ? */
+.team-builder {
+    grid-area: team-builder;
+    border-top: 4px solid var(--red);
+}
+/* ? Calculator Card ? */
+.calculator {
+    grid-area: calculator;
+    border-top: 4px solid var(--blue);
+}
+/* ? Karma Card ? */
+.karma {
+    grid-area: karma;
+    border-top: 4px solid var(--orange);
+}
+@media screen and (max-width: 1315px) {
+    /* ? Four card section container */
+    .four-card-section-container {
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(4, 130px);
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+}
+@media screen and (max-width: 1200px) {
+    /* ! Global ! */
+    body {
+        overflow: scroll;
+    }
+    /* ? Four card section container */
+    .four-card-section-container {
+        grid-template-columns: 450px;
+        grid-template-rows: repeat(4, 300px);
+        grid-template-areas:
+        "supervisor"
+        "team-builder"
+        "karma"
+        "calculator";
+        margin-top: 5rem;
+        gap: 2rem;
+    }
+}
+@media screen and (max-width: 465px) {
+    /* ? Four card section container */
+    .four-card-section-container {
+        grid-template-columns: 375px;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    /* ? Four card section container */
+    .four-card-section-container {
+        grid-template-columns: 350px;
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 365px) {
+    /* ? Header ? */
+    .thin-header {
+        font-size: 24px;
+    }
+    .bolded-header {
+        font-size: 24px;
+    }
+    .paragraph-header {
+        font-size: 15px;
+        margin-top: 0.5rem;
+        max-width: 85%;
+    }      
+    /* ? Four card section container */
+    .four-card-section-container {
+        grid-template-columns: 300px;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+}
