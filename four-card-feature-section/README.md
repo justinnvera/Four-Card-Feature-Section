@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor](https://your-solution-url.com)
-- Live Site URL: [Vercel](https://your-live-site-url.com)
+- Solution URL: [Frontend Mentor](https://github.com/justinnvera/four-card-feature-section)
+- Live Site URL: [Vercel](https://four-card-feature-section-jet-nine.vercel.app)
 
 ### Built with
 
